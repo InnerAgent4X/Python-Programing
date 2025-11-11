@@ -3,11 +3,9 @@ import sys
 
 
 def text_parser():
-    with open(sys.argv[1], 'r') as f:
-        for line in f:
-            lines = line.split('|')
-
-            print(lines)
+    with open(sys.argv[1], 'r') as file:
+        for line in file:
+            print("This is working")
 
 
 
@@ -16,6 +14,7 @@ def text_parser():
 
 
 def main():
+    print(sys.argv[0])
     print(sys.argv[1])
 
     text_parser()
