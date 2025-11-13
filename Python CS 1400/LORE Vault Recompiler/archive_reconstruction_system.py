@@ -1,9 +1,11 @@
 import sys
+import codecs
 
 
 #opens the text file, then sorts and exports every line as a tuple with the number first
 def text_parser(Bookcode):
-    with open(sys.argv[1], 'r') as file:
+    #Ignores the unicode in the file so it doesn't break
+    with codecs.open(sys.argv[1], encoding='utf-8') as file:
         lines_sortable =[]
 
         #splits the lines by the | then adds it to the list as a tuple
@@ -24,6 +26,7 @@ def text_parser(Bookcode):
         average_line = (sum(len(text) for text in lines_second)/len(lines_second))
         print(f"Average length: {average_line:.3f}")
 
+
         external_file(Bookcode, longest_line_index, longest_line, average_line, lines_second)
 
 
@@ -38,7 +41,7 @@ def external_file(Bookcode, longest_line_index, longest_line, average_line, line
             print("File not found, creating new file")
             file.write(f"""{Bookcode}\n
 Longest line ({longest_line_index}): {longest_line}\n
-Average length: {average_line}\n
+Average length: {average_line:.3f}\n
 """)
             for line in lines_second:
                 file.write(f"{line}\n")
@@ -48,7 +51,7 @@ Average length: {average_line}\n
         with open(f"{Bookcode}_book.txt", "w") as file:
             file.write(f"""{Bookcode}\n
 Longest line ({longest_line_index}): {longest_line}\n
-Average length: {average_line}\n
+Average length: {average_line:.3f}\n
 """)
             for line in lines_second:
                 file.write(f"{line}\n")
