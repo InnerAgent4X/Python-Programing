@@ -37,8 +37,9 @@ def external_file(Bookcode, longest_line_index, longest_line, average_line, line
         with open(f"{Bookcode}_book.txt", "x") as file:
             print("File not found, creating new file")
             file.write(f"""{Bookcode}\n
-            Longest line ({longest_line_index}): {longest_line}\n
-            {average_line}\n""")
+Longest line ({longest_line_index}): {longest_line}\n
+Average length: {average_line}\n
+""")
             for line in lines_second:
                 file.write(f"{line}\n")
 
@@ -47,7 +48,8 @@ def external_file(Bookcode, longest_line_index, longest_line, average_line, line
         with open(f"{Bookcode}_book.txt", "w") as file:
             file.write(f"""{Bookcode}\n
 Longest line ({longest_line_index}): {longest_line}\n
-Average length: {average_line}\n""")
+Average length: {average_line}\n
+""")
             for line in lines_second:
                 file.write(f"{line}\n")
 

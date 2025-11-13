@@ -1,8 +1,9 @@
 ALB
 
-Longest line (5): i dont think this should work but it has too
+Longest line (7): King said, referring to his book. “I couldn’t send all the horses, you
 
-Average length: 27.285714285714285
+Average length: 33.125
+
 does this work?
 I dont know
 lets find out shall we?
@@ -10,3 +11,4 @@ well, here goes nothing
 “I daresay you’ll see her s
 i dont think this should work but it has too
 i dont think this should work but it has too
+King said, referring to his book. “I couldn’t send all the horses, you
