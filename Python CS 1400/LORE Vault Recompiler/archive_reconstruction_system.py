@@ -19,7 +19,7 @@ def text_parser(Bookcode):
             #by nature of going though the iterations of the loop.
             if len(line_contents[0]) > len(longest_line):
                 longest_line = line_contents[0]
-                longest_line_index = line_contents[1]
+                longest_line_index = int(line_contents[1])
 
         #sorts the tuples
         sorted_lines = sorted(lines_sortable)
@@ -53,7 +53,7 @@ Average length: {round(average_line)}\n
         print("File Found!")
         with open(f"{Bookcode}_book.txt", "w") as file:
             file.write(f"""{Bookcode}\n
-Longest line ({longest_line_index}): {longest_line} \n
+Longest line ({longest_line_index}): {longest_line}\n
 Average length: {average_line:.0f}\n
 """)
             for line in lines_second:

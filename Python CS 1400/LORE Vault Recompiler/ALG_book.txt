@@ -1,9 +1,8 @@
 ALG
 
-Longest line (23
-): 2. Alice through Q.'s 3d (_by railwayv) to 4th (_Tweedledum and Tweedledee_) 
+Longest line (23): 2. Alice through Q.'s 3d (_by railwayv) to 4th (_Tweedledum and Tweedledee_)
 
-Average length: 53.662
+Average length: 54
 
 [Illustration]
 THROUGH THE LOOKING-GLASS

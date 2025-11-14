@@ -1,7 +1,6 @@
 TTL
 
-Longest line (9193
-): some piece of solid ground, or we’ll be dead. So we’re in God’s hands,
+Longest line (9193): some piece of solid ground, or we’ll be dead. So we’re in God’s hands,
 
 Average length: 59
 
