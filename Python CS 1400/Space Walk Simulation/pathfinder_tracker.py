@@ -92,21 +92,6 @@ def plot_graph(x_positions, y_positions, astronaut_name, color, marker):
     print(f"Saved {filename}")
 
 
-'''
-def plot_graph(coordinates, color, marker):
-
-    for item in coordinates:
-        x_values = item[0]
-        y_values = item[1]
-        plt.scatter(x_values, y_values, marker=marker, color=color)
-
-    #plt.scatter(x_values, y_values, color = color, marker = marker )
-    plt.xlabel("x")
-    plt.ylabel("y")
-    plt.title("Space Walk Simulation")
-    plt.grid(True)
-    plt.show()
-'''
 
 def main():
     #dictionary with lists to store the movement paths
@@ -128,7 +113,7 @@ def main():
 
     x_positions = []
     y_positions = []
-    lance_walk(astronauts)
+    sophie_walk(astronauts)
     for item in astronauts["Sophie"]:
         x_positions.append(item[0])
         y_positions.append(item[1])
@@ -137,7 +122,7 @@ def main():
 
     x_positions = []
     y_positions = []
-    lance_walk(astronauts)
+    finn_walk(astronauts)
     for item in astronauts["Finn"]:
         x_positions.append(item[0])
         y_positions.append(item[1])
