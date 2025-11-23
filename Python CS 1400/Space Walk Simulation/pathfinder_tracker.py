@@ -109,7 +109,6 @@ def main():
         x_positions.append(item[0])
         y_positions.append(item[1])
     plot_graph(x_positions, y_positions, astronaut_name = "Lance" ,color = "blue", marker = "o")
-    print(astronauts["Lance"])
 
     x_positions = []
     y_positions = []
@@ -118,7 +117,6 @@ def main():
         x_positions.append(item[0])
         y_positions.append(item[1])
     plot_graph(x_positions, y_positions, astronaut_name = "Sophie" ,color = "red", marker = "s")
-    print(astronauts["Sophie"])
 
     x_positions = []
     y_positions = []
@@ -127,7 +125,6 @@ def main():
         x_positions.append(item[0])
         y_positions.append(item[1])
     plot_graph(x_positions, y_positions, astronaut_name = "Finn" ,color = "green", marker = "^")
-    print(astronauts["Finn"])
 
 if __name__ == '__main__':
     main()
