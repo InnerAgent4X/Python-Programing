@@ -1,10 +1,10 @@
-John F. Kennedy | 1961 1963 | Democratic
-Lyndon B. Johnson | 1963 1969 | Democratic
-Richard Nixon | 1969 1974 | Republican
-Gerald Ford | 1974 1977 | Republican
-Jimmy Carter | 1977 1981 | Democratic
-Ronald Reagan | 1981 1989 | Republican
-George H. W. Bush | 1989 1993 | Republican
-Bill Clinton | 1993 2001 | Democratic
-George W. Bush | 2001 2009 | Republican
-Barack Obama | 2009 2017 | Democratic
+John F. Kennedy | 1 | 1961 | 11 | 1963 | Democratic
+Lyndon B. Johnson | 11 | 1963 | 1 | 1969 | Democratic
+Richard Nixon | 1 | 1969 | 8 | 1974 | Republican
+Gerald Ford | 8 | 1974 | 1 | 1977 | Republican
+Jimmy Carter | 1 | 1977 | 1 | 1981 | Democratic
+Ronald Reagan | 1 | 1981 | 1 | 1989 | Republican
+George H. W. Bush | 1 | 1989 | 1 | 1993 | Republican
+Bill Clinton | 1 | 1993 | 1 | 2001 | Democratic
+George W. Bush | 1 | 2001 | 1 | 2009 | Republican
+Barack Obama | 1 | 2009 | 12 | 2012 | Democratic
