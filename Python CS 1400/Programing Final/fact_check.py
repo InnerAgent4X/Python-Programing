@@ -3,17 +3,46 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 
 
-def job_data():
+def job_data(pres_data):
     print("job_data")
     # opens and reads the csv file into a dictionary
     with open('BLS_private_mine.csv', newline='') as csvfile:
         values = csv.DictReader(csvfile)
+        pres_counter = 0
+        month_counter = pres_data[0][1]
+        total_counter = 0
+
+        jobs_presidents = {
+            'Democrat': 0,
+            'Republican': 0
+        }
+        done = False
         for row in values:
+            if done:
+                break
             #Converts the strings to integers
             for key,value in row.items():
                 row[key] = int(value)
 
-            print(row)
+                if key == 'Year':
+                    continue
+                elif pres_data[pres_counter][2] == 'Democratic':
+                    jobs_presidents['Democrat'] += row[key]
+                    month_counter -= 1
+                elif pres_data[pres_counter][2] == 'Republican':
+                    jobs_presidents['Republican'] += row[key]
+                    month_counter -= 1
+                if month_counter == 0:
+                    pres_counter += 1
+                    if pres_counter == len(pres_data):
+                        done = True
+                        break
+                    month_counter = pres_data[pres_counter][1]
+                total_counter += 1
+                print(f"{total_counter} : {jobs_presidents}")
+
+
+
 
 
 
@@ -46,17 +75,21 @@ def presidents_parser():
             elif row[-1] == 'Republican':
                 republicans.append(row)
             else:
-                print('Error')
-        print(democrats)
-        print(republicans)
+                #for debugging
+                print('Error, party not found')
 
 
-
+        #uses the dates to find the amount of time in between, then converts to months
         for pres in pres_data:
             term = relativedelta(pres[2], pres[1])
             diff_months = term.years * 12 + term.months
 
-            print(diff_months)
+            pres[1] = diff_months
+            pres.remove(pres[2])
+
+
+        print(pres_data)
+        return pres_data
 
 
 
@@ -65,8 +98,8 @@ def presidents_parser():
 
 def main():
     print("main")
-    presidents_parser()
-    #job_data()
+
+    job_data(presidents_parser())
 
 
 
