@@ -16,10 +16,34 @@ def job_data(pres_data):
             'Democrat': 0,
             'Republican': 0
         }
+        print(values)
+        print(type(values))
+        # job_growth =
         done = False
         for row in values:
             if done:
                 break
+
+            for key, value in row.items():
+                row[key] = int(value)
+
+                if key == 'Year':
+                    continue
+                elif pres_data[pres_counter][2] == 'Democratic':
+                    jobs_presidents['Democrat'] += row[key]
+                    month_counter -= 1
+                elif pres_data[pres_counter][2] == 'Republican':
+                    jobs_presidents['Republican'] += row[key]
+                    month_counter -= 1
+                if month_counter == 0:
+                    pres_counter += 1
+                    if pres_counter == len(pres_data):
+                        done = True
+                        break
+                    month_counter = pres_data[pres_counter][1]
+                    total_counter += 1
+                    print(f"{total_counter} : {jobs_presidents}")
+                '''
             #Converts the strings to integers
             for key,value in row.items():
                 row[key] = int(value)
@@ -41,8 +65,7 @@ def job_data(pres_data):
                 total_counter += 1
                 print(f"{total_counter} : {jobs_presidents}")
 
-
-
+'''
 
 
 
